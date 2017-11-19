@@ -1,5 +1,5 @@
 do
-local necro = import('/mods/necro/necro.lua')
+
 local oldUnit = Unit
 
 Unit = Class(oldUnit) {
