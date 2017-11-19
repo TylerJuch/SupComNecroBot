@@ -132,6 +132,7 @@ UnitBlueprint {
         AnimationBuild = '/units/UEL0309/uel0309_aopen.sca',
         AnimationBuildRate = 5,
         AnimationWater = '/units/UEL0309/uel0309_awheels.sca',
+        IconName = "UEL0310",
         IdleEffects = {
             Water = {
                 Effects = {

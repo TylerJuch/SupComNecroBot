@@ -129,6 +129,7 @@ UnitBlueprint {
             '<LOC ability_engineeringsuite >Engineering Suite',
         },
         AnimationWater = '/units/URL0310/url0310_Awheels.sca',
+        IconName = "URL0310",
         IdleEffects = {
             Water = {
                 Effects = {
@@ -149,7 +150,7 @@ UnitBlueprint {
                     MeshName = '/units/URL0309/URL0309_lod0.scm',
                     AlbedoName = '/units/URL0309/URL0310_Albedo.dds',
                     NormalsName = '/units/URL0309/URL0309_normalsTS.dds',
-         	          SpecularName = '/units/URL0309/URL0310_SpecTeam.dds', 
+         	          SpecularName = '/units/URL0309/URL0310_SpecTeam.dds',
                     LODCutoff = 215,
                     Scrolling = true,
                     ShaderName = 'Insect',

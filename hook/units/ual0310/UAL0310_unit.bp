@@ -137,6 +137,7 @@ UnitBlueprint {
             '<LOC ability_engineeringsuite >Engineering Suite',
         },
         AnimationBuild = '/units/ual0309/ual0309_aopen.sca',
+        IconName = "UAL0310",
         IdleEffects = {
             Land = {
                 Effects = {
