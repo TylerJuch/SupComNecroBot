@@ -14,6 +14,7 @@ Unit = Class(oldUnit) {
   OnStopReclaim = function(self, target)
     oldUnit.OnStopReclaim(self, target)
 
+    # Why are we forking here?
     ForkThread(function()
       LOG(self.ReclaimTargetBP)
       LOG(self.ReclaimTargetPosition)

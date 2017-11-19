@@ -7,7 +7,7 @@ Prop = Class(oldProp) {
     local reclaimTime, energyReclaim, massReclaim = oldProp.GetReclaimCosts(self, reclaimer)
 
     if EntityCategoryContains(categories.NECRO, reclaimer) then
-      return reclaimTime, 1, 1
+      return reclaimTime, 0, 0
     else
       return reclaimTime, energyReclaim, massReclaim
     end
