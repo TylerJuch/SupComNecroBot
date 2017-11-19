@@ -147,9 +147,9 @@ UnitBlueprint {
             LODs = {
                 {
                     MeshName = '/units/URL0309/URL0309_lod0.scm',
-                    AlbedoName = '/units/URL0309/URL0309_Albedo.dds',
+                    AlbedoName = '/units/URL0309/URL0310_Albedo.dds',
                     NormalsName = '/units/URL0309/URL0309_normalsTS.dds',
-         	    SpecularName = '/units/URL0309/URL0309_SpecTeam.dds', 
+         	          SpecularName = '/units/URL0309/URL0310_SpecTeam.dds', 
                     LODCutoff = 215,
                     Scrolling = true,
                     ShaderName = 'Insect',
