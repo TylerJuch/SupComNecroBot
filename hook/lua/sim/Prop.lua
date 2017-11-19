@@ -11,6 +11,7 @@ Prop = Class(oldProp) {
     else
       return reclaimTime, energyReclaim, massReclaim
     end
+  end
 }
 
 end
