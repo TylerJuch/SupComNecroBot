@@ -120,8 +120,8 @@ UnitBlueprint {
         'VISIBLETORECON',
         'RECLAIMABLE',
         'PATROLHELPER',
-	'NECRO',
-	'CONSTRUCTION',
+        'NECRO',
+        'CONSTRUCTION',
     },
     CollisionOffsetY = -0.25,
     Defense = {
@@ -174,10 +174,10 @@ UnitBlueprint {
                     ShaderName = 'Aeon',
                 },
                 {
-                    AlbedoName = 'ual0309_lod1_albedo.dds',
+                    AlbedoName = 'ual0310_lod1_albedo.dds',
                     LODCutoff = 215,
                     ShaderName = 'Aeon',
-                    SpecularName = 'ual0309_lod1_specteam.dds',
+                    SpecularName = 'ual0310_lod1_specteam.dds',
                 },
             },
         },
