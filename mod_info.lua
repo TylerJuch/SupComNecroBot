@@ -1,0 +1,16 @@
+name = "Necro Bot"
+uid = "6223f5f8-422c-11dc-8314-0800200c9a66"
+version = 3
+description = "Adds a T3 Necro Bot to each faction. The Necro turns wreckage back into working units through the reclaim process."
+author = "Silenthunter, Rockoe10, DigitalCmdr"
+url = ""
+selectable = true
+enabled = true
+exclusive = false
+ui_only = false
+requires = {}
+requiresNames = {}
+conflicts = {}
+before = {}
+after = {}
+icon = "/mods/necro/skull.png"
