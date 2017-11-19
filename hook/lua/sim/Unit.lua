@@ -14,6 +14,7 @@ Unit = Class(oldUnit) {
   OnStopReclaim = function(self, target)
     oldUnit.OnStopReclaim(self, target)
 
+    # If the reclaimer is a necro, then resurrect the unit that was reclaimed
     if EntityCategoryContains(categories.NECRO, self) then
       local blueprint = self.ReclaimTargetBP
       local army=self:GetArmy()
