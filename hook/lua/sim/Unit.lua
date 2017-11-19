@@ -14,18 +14,12 @@ Unit = Class(oldUnit) {
   OnStopReclaim = function(self, target)
     oldUnit.OnStopReclaim(self, target)
 
-    # Why are we forking here?
-    ForkThread(function()
-      LOG(self.ReclaimTargetBP)
-      LOG(self.ReclaimTargetPosition)
-
-      if EntityCategoryContains(categories.NECRO, self) then
-        local blueprint = self.ReclaimTargetBP
-        local army=self:GetArmy()
-        local position=self.ReclaimTargetPosition
-        CreateUnitHPR(blueprint, army, position[1], position[2], position[3], 0, 0, 0)
-      end
-    end)
+    if EntityCategoryContains(categories.NECRO, self) then
+      local blueprint = self.ReclaimTargetBP
+      local army=self:GetArmy()
+      local position=self.ReclaimTargetPosition
+      CreateUnitHPR(blueprint, army, position[1], position[2], position[3], 0, 0, 0)
+    end
 end,
 }
 
