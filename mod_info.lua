@@ -1,5 +1,5 @@
 name = "Necro Bot"
-uid = "6223f5f8-422c-11dc-8314-0800200c9a66"
+uid = "4c5ba0cc-3232-4829-843c-8d2e5c1e2d14"
 version = 3
 description = "Adds a T3 Necro Bot to each faction. The Necro turns wreckage back into working units through the reclaim process."
 author = "Silenthunter, Rockoe10, DigitalCmdr"
