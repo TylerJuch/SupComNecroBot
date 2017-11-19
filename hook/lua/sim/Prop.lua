@@ -1,24 +1,26 @@
-do
-local Entity = import('/lua/sim/Entity.lua').Entity
-local EffectUtil = import('/lua/EffectUtilities.lua')
-local oldPropfile=Prop
-
+local oldProp = Prop
 Prop = Class(oldPropfile) {
+  GetReclaimCosts = function(self, reclaimer)
+    local reclaimTime = getReclaimTime(self, reclaimer)
 
-        GetReclaimCosts = function(self, reclaimer)
-        local rbp = reclaimer:GetBlueprint()
-        local mtime = self.ReclaimTimeMassMult * (self.MassReclaim / (rbp.Economy.BuildRate or 1))
-        local etime = self.ReclaimTimeEnergyMult * (self.EnergyReclaim / (rbp.Economy.BuildRate or 1))
-        local time = mtime
+    if EntityCategoryContains(categories.NECRO, reclaimer) then
+      return (reclaimTime/10), 1, 1
+    else
+      return (reclaimTime/10), self.EnergyReclaim, self.MassReclaim
+    end
+  end,
 
-        if mtime < etime then
-            time = etime
-        end
-        
-        if EntityCategoryContains(categories.NECRO,reclaimer)then
-        return (time/10), 1, 1
-        end
-        return (time/10), self.EnergyReclaim, self.MassReclaim
-    end,
+  getMassReclaimTime = function(self, reclaimerBlueprint)
+    return self.ReclaimTimeMassMult * (self.MassReclaim / reclaimer:GetBuildRate())
+  end,
+
+  getEnergyReclaimTime = function(self, reclaimerBlueprint)
+    return self.ReclaimTimeEnergyMult * (self.EnergyReclaim / reclaimer:GetBuildRate())
+  end,
+
+  getReclaimTime = function (self, reclaimer)
+    local massReclaimTime = getMassReclaimTime(self, reclaimer)
+    local energyReclaimTime = getEnergyReclaimiTime(self, reclaimer)
+    return = math.max(massReclaimTime, energyReclaimTime)
+  end
 }
-end
