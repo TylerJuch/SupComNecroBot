@@ -6,7 +6,7 @@ Unit = Class(oldUnit) {
   OnStartReclaim = function(self, target)
     # Store off BP and position so we can resurrect the correct thing at the correct place
     self.ReclaimTargetBP = target.AssociatedBP
-    self.ReclaimTargetPosition=target:GetPosition()
+    self.ReclaimTargetPosition = target:GetPosition()
 
     oldUnit.OnStartReclaim(self, target)
   end,
