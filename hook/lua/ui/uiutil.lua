@@ -3,6 +3,7 @@ do
       'ual0310',
       'uel0310',
       'url0310',
+      'xsl0310'
    }
    --unit icon must be in /icons/units/. Put the full path to the /icons/ folder in here - note no / on the end!
    local MyIconPath = "/mods/necro"

@@ -112,8 +112,8 @@ UnitBlueprint {
         'VISIBLETORECON',
         'RECLAIMABLE',
         'PATROLHELPER',
-	'NECRO',
-	'CONSTRUCTION',
+        'NECRO',
+        'CONSTRUCTION',
     },
     CollisionOffsetY = -0.25,
     Defense = {
