@@ -18,8 +18,9 @@ Unit = Class(oldUnit) {
     LOG(repr(target))
 
     # If the reclaimer is a necro, then resurrect the unit that was reclaimed
-    # If target is nil, then the wreckage has already been resurrected. This
-    # covers the case in which multiple necros are reclaiming the same wreckage.
+    # We have to prevent multiple necros from resurrecting the same wreckage,
+    # so we set a flag on the wreckage when it is reclaimed and check it here.
+    # The wreckage can also be destroyed, so we have also have a safety check.
     if EntityCategoryContains(categories.NECRO, self) and target ~= nil and target.HasBeenResurrected ~= true then
       local blueprint = self.ReclaimTargetBP
       local army=self:GetArmy()
