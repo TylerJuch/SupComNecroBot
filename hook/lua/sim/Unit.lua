@@ -14,9 +14,6 @@ Unit = Class(oldUnit) {
   OnStopReclaim = function(self, target)
     oldUnit.OnStopReclaim(self, target)
 
-    LOG("OnStopReclaim Target:")
-    LOG(repr(target))
-
     # If the reclaimer is a necro, then resurrect the unit that was reclaimed
     # We have to prevent multiple necros from resurrecting the same wreckage,
     # so we set a flag on the wreckage when it is reclaimed and check it here.
